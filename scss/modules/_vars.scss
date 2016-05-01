@@ -1,0 +1,15 @@
+$ms-font:'ＭＳ Ｐゴシック', 'MS PGothic','Hiragino Kaku Gothic Pro','Arial',sans-serif;
+$kozuka-font:'Kozuka Gothic Pr6N','Kozuka Gothic Pro','メイリオ', Meiryo,'Arial',sans-serif;
+$mincho-font:'Hiragino Mincho ProN','メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Arial',sans-serif;
+$kaku-font:'Hiragino Kaku Gothic ProN','メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', 'Arial',sans-serif;
+
+$default:$kozuka-font;
+
+// Font Properties
+$default-size:14px;
+$default-line:1.7;
+$default-color:#555;
+
+//Link Properties
+$sub-color:#f4619f;
+$sub-hover:$default-color;

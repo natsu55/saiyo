@@ -1,0 +1,93 @@
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	@each $value in $values {
+
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / 10 + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * 10 + px));
+				$rem: append($rem, $value);
+			}
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+
+
+//@mixin use-sprite($sprite) {
+
+
+ // display: block;
+ // width: image-width(sprite-file($icons, $sprite));
+ // height: image-height(sprite-file($icons, $sprite));
+ // background-image: sprite-url($icons);
+ // background-position: sprite-position($icons, $sprite);
+ // background-repeat: no-repeat;
+ // overflow: hidden;
+//}
+
+$icons: sprite-map("sprite/*.png", $layout: smart);
+
+@mixin use-sprite($sprite, $block: off) {
+
+	@if $block == off {
+	    background-image: sprite-url($icons);
+	    background-position: sprite-position($icons, $sprite);
+	    background-repeat: no-repeat;
+	    overflow: hidden;
+	    display: inline-block;
+	    height: image-height(sprite-file($icons, $sprite));
+	    width: image-width(sprite-file($icons, $sprite));
+	} @else {
+		background-image: sprite-url($icons) !important;
+	    background-position: sprite-position($icons, $sprite);
+	    background-repeat: no-repeat;
+	    overflow: hidden;
+	    display: block;
+	    height: image-height(sprite-file($icons, $sprite)) !important;
+	    width: image-width(sprite-file($icons, $sprite)) !important;
+	}
+
+}
+
+@mixin line {
+  display: inline-block;
+  width: $button-size;
+  height: 4px;
+  background: #fff;
+}
