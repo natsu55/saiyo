@@ -70,7 +70,7 @@ get_header(); ?>
         <div class="container padding-vertical-45 sp-padding-vertical-20">
             <div class="row custom-sp-row">
                 <div class="col-sm-6 col-sm-push-6 sp-no-padding">
-                    <img src="img/about-daidolife-1.jpg" alt="" srcset="" width="100%" height="auto">
+                    <img src="<?php echo wp_get_attachment_image_src( $section_image_2, 'full' )[0]; ?>" alt="" srcset="" width="100%" height="auto">
                 </div>
                 <div class="col-sm-6 col-sm-pull-6 sp-padding-horizontal-10">
                     <?php echo get_post_meta( $post->ID, 'paraheading2', true ); ?>
@@ -83,7 +83,7 @@ get_header(); ?>
     <div class="container padding-vertical-100 sp-padding-vertical-40">
         <div class="row custom-sp-row">
             <div class="col-sm-6 sp-no-padding">
-                <img src="img/about-daidolife-2.jpg" alt="" srcset="" width="100%" height="auto">
+                <img src="<?php echo wp_get_attachment_image_src( $section_image_3, 'full' )[0]; ?>" alt="" srcset="" width="100%" height="auto">
             </div>
             <div class="col-sm-6 sp-padding-horizontal-10">
                 <?php echo get_post_meta( $post->ID, 'paraheading3', true ); ?>
@@ -96,7 +96,7 @@ get_header(); ?>
         <div class="container padding-vertical-45 sp-padding-vertical-20">
             <div class="row custom-sp-row">
                 <div class="col-sm-6 col-sm-push-6 sp-no-padding">
-                    <img src="img/about-daidolife-3.jpg" alt="" srcset="" width="100%" height="auto">
+                    <img src="<?php echo wp_get_attachment_image_src( $section_image_4, 'full' )[0]; ?>" alt="" srcset="" width="100%" height="auto">
                 </div>
                 <div class="col-sm-6 col-sm-pull-6 sp-padding-horizontal-10">
                     <?php echo get_post_meta( $post->ID, 'paraheading4', true ); ?>
@@ -109,7 +109,7 @@ get_header(); ?>
     <div class="container padding-vertical-100 sp-padding-vertical-40">
         <div class="row custom-sp-row">
             <div class="col-sm-6 sp-no-padding">
-                <img src="img/about-daidolife-4.jpg" alt="" srcset="" width="100%" height="auto">
+                <img src="<?php echo wp_get_attachment_image_src( $section_image_5, 'full' )[0]; ?>" alt="" srcset="" width="100%" height="auto">
             </div>
             <div class="col-sm-6 sp-padding-horizontal-10">
                 <?php echo get_post_meta( $post->ID, 'paraheading5', true ); ?>

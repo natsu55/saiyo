@@ -155,13 +155,6 @@ function gm_register_meta_boxes( $meta_boxes ) {
 		'fields' => array(
 			//SECTION KNOWCOMPANY_1
 			array(
-				'name' => __( '大同生命保険についての画像', ThemeDomain ),
-				'id'   => 'sectionimage',
-				'type' => 'image_upload',
-				'max_file_uploads' => 1,
-				'max_status'       => false,
-			),
-			array(
 				'id' => 'sectionheading1',
 				'type' => 'wysiwyg',
 				'name' => esc_html__( '大同生命保険について', ThemeDomain ),
@@ -175,9 +168,16 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				),
 			),
 			array(
+				'name' => __( '大同生命保険で働く4つのポイントの画像', ThemeDomain ),
+				'id'   => 'sectionimage',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
 				'id' => 'paraheading1',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Heading', ThemeDomain ),
+				'name' => esc_html__( '大同生命保険で働く4つのポイント', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -190,7 +190,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			array(
 				'id' => 'paracontent1',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'name' => esc_html__( '大同生命保険で働く4つのポイントのテキスト', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -201,13 +201,6 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				),
 			),
 			//SECTION KNOWCOMPANY_2
-			array(
-				'name' => __( '① 訪問先は企業の画像', ThemeDomain ),
-				'id'   => 'sectionimage_2',
-				'type' => 'image_upload',
-				'max_file_uploads' => 1,
-				'max_status'       => false,
-			),
 			array(
 				'id' => 'sectionheading2',
 				'type' => 'wysiwyg',
@@ -220,6 +213,13 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'teeny'         => false,
 					'media_buttons' => true,
 				),
+			),
+			array(
+				'name' => __( '① 訪問先は企業の画像', ThemeDomain ),
+				'id'   => 'sectionimage_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
 			),
 			array(
 				'id' => 'paraheading2',
@@ -237,7 +237,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			array(
 				'id' => 'paracontent2',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'name' => esc_html__( '① 訪問先は企業のテキスト', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -248,6 +248,13 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				),
 			),
             //KNOWCOMPANY SECTION HEADING ② 完全週休二日制、毎日17時に退社 
+			array(
+				'name' => __( '② 完全週休二日制の画像', ThemeDomain ),
+				'id'   => 'sectionimage_3',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
 			array(
 				'id' => 'paraheading3',
 				'type' => 'wysiwyg',
@@ -264,7 +271,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			array(
 				'id' => 'paracontent3',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'name' => esc_html__( '② 完全週休二日制のテキスト', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -274,7 +281,14 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'media_buttons' => true,
 				),
 			),
-			//KNOWCOMPANY SECTION HEADING ③ 未経験からでも安心できる充実の研修制度 
+			//KNOWCOMPANY SECTION HEADING ③ 未経験からでも安心できる充実の研修制度
+			array(
+				'name' => __( '③ 未経験からでも安心できる充実の研修制度の画像', ThemeDomain ),
+				'id'   => 'sectionimage_4',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			), 
 			array(
 				'id' => 'paraheading4',
 				'type' => 'wysiwyg',
@@ -291,7 +305,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			array(
 				'id' => 'paracontent4',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'name' => esc_html__( '③ 未経験からでも安心できる充実の研修制度のテキスト', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -301,7 +315,14 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'media_buttons' => true,
 				),
 			),
-			//KNOWCOMPANY SECTION HEADING ④ 正社員、がんばり次第で収入アップも可！ 
+			//KNOWCOMPANY SECTION HEADING ④ 正社員、がんばり次第で収入アップも可！
+			array(
+				'name' => __( '④ 正社員、がんばり次第で収入アップも可！の画像', ThemeDomain ),
+				'id'   => 'sectionimage_5',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			), 
 			array(
 				'id' => 'paraheading5',
 				'type' => 'wysiwyg',
@@ -318,7 +339,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			array(
 				'id' => 'paracontent5',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'name' => esc_html__( '④ 正社員、がんばり次第で収入アップも可！のテキスト', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
