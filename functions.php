@@ -126,7 +126,12 @@ function luggage_scripts() {
 	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '	
 
 	wp_enqueue_script( 'saiyo-jquery', get_template_directory_uri() . '/assets/jquery/jquery.min.js', array(), '', true );
-
+	wp_enqueue_script( 'saiyo-customizer', get_template_directory_uri() . '/js/customizer.js', array(), '', true );
+	wp_enqueue_script( 'saiyo-default', get_template_directory_uri() . '/js/default.js', array(), '', true );
+	wp_enqueue_script( 'saiyo-ellipsis', get_template_directory_uri() . '/js/ellipsis.min.js', array(), '', true );
+	wp_enqueue_script( 'saiyo-flex-slider', get_template_directory_uri() . '/js/jquery.flexslider.min.js', array(), '', true );
+	wp_enqueue_script( 'saiyo-konnect-slider', get_template_directory_uri() . '/js/konnect-slider.js', array(), '', true );
+	wp_enqueue_script( 'saiyo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
 	wp_enqueue_script( 'saiyo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
