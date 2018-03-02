@@ -368,130 +368,6 @@ function gm_register_meta_boxes( $meta_boxes ) {
 	);
 //KNOWCOMPANY meta boxes :: END
 
-//PROFILEBOX meta boxes :: START
-	$meta_boxes[] = array(
-		'title'      => 'Page Settings',
-		'id'         => 'post-setting',
-		'post_types' => array('page'), // List of taxonomies. Array or string
-		'priority'	=> 'low',
-		'include'	=> array(
-				'template' => array('elements/profile-box.php'),
-
-			),
-
-		'fields' => array(
-			array(
-				'id' => 'sectionheading',
-				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Title', ThemeDomain ),
-				'desc' => esc_html__( '---', ThemeDomain ),
-				'clone' => false,
-				'sort_clone' => false,
-				'options' => array(
-					'textarea_rows' => 1,
-					'teeny'         => false,
-					'media_buttons' => true,
-				),
-			),
-			array(
-				'id' => 'sectioncontents',
-				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Description', ThemeDomain ),
-				'desc' => esc_html__( '---', ThemeDomain ),
-				'clone' => false,
-				'sort_clone' => false,
-				'options' => array(
-					'textarea_rows' => 1,
-					'teeny'         => false,
-					'media_buttons' => true,
-				),
-			),
-
-			//Profile Items
-			array(
-				'name' => __( 'Profile Box 1', ThemeDomain ),
-				'id'   => 'profimg_1',
-				'type' => 'image_upload',
-				'max_file_uploads' => 1,
-				'max_status'       => false,
-			),
-			array(
-				'id' => 'proftxt_1',
-				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Description', ThemeDomain ),
-				'desc' => esc_html__( '---', ThemeDomain ),
-				'clone' => false,
-				'sort_clone' => false,
-				'options' => array(
-					'textarea_rows' => 1,
-					'teeny'         => false,
-					'media_buttons' => true,
-				),
-			),
-			array(
-				'name' => __( 'Profile Box 2', ThemeDomain ),
-				'id'   => 'profimg_2',
-				'type' => 'image_upload',
-				'max_file_uploads' => 1,
-				'max_status'       => false,
-			),
-			array(
-				'id' => 'proftxt_2',
-				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Description', ThemeDomain ),
-				'desc' => esc_html__( '---', ThemeDomain ),
-				'clone' => false,
-				'sort_clone' => false,
-				'options' => array(
-					'textarea_rows' => 1,
-					'teeny'         => false,
-					'media_buttons' => true,
-				),
-			),
-			array(
-				'name' => __( 'Profile Box 3', ThemeDomain ),
-				'id'   => 'profimg_3',
-				'type' => 'image_upload',
-				'max_file_uploads' => 1,
-				'max_status'       => false,
-			),
-			array(
-				'id' => 'proftxt_3',
-				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Description', ThemeDomain ),
-				'desc' => esc_html__( '---', ThemeDomain ),
-				'clone' => false,
-				'sort_clone' => false,
-				'options' => array(
-					'textarea_rows' => 1,
-					'teeny'         => false,
-					'media_buttons' => true,
-				),
-			),
-			array(
-				'name' => __( 'Profile Box 4', ThemeDomain ),
-				'id'   => 'profimg_4',
-				'type' => 'image_upload',
-				'max_file_uploads' => 1,
-				'max_status'       => false,
-			),
-			array(
-				'id' => 'proftxt_4',
-				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Description', ThemeDomain ),
-				'desc' => esc_html__( '---', ThemeDomain ),
-				'clone' => false,
-				'sort_clone' => false,
-				'options' => array(
-					'textarea_rows' => 1,
-					'teeny'         => false,
-					'media_buttons' => true,
-				),
-			),
-		),
-	);
-//PROFILEBOX meta boxes :: END
-
 //KNOWPEOPLE meta boxes :: START
 	$meta_boxes[] = array(
 		'title'      => 'Page Settings',
@@ -875,6 +751,174 @@ function gm_register_meta_boxes( $meta_boxes ) {
 		),
 	);
 //KNOWPEOPLE meta boxes :: END
+
+//PROFILEBOX meta boxes :: START
+	$meta_boxes[] = array(
+		'title'      => 'Page Settings',
+		'id'         => 'post-setting',
+		'post_types' => array('page'), // List of taxonomies. Array or string
+		'priority'	=> 'low',
+		'include'	=> array(
+				'template' => array('elements/profile-box.php'),
+
+			),
+
+		'fields' => array(
+			array(
+				'id' => 'prof_sectionheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Title', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'prof_sectioncontents',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+
+			//Profile Items
+			array(
+				'name' => __( 'Profile Box 1', ThemeDomain ),
+				'id'   => 'profimg_1',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Profile Box 2', ThemeDomain ),
+				'id'   => 'profimg_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Profile Box 3', ThemeDomain ),
+				'id'   => 'profimg_3',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Profile Box 4', ThemeDomain ),
+				'id'   => 'profimg_4',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_4',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+		),
+	);
+//PROFILEBOX meta boxes :: END
+
+//OFFICEWISE meta boxes :: START
+	$meta_boxes[] = array(
+		'title'      => 'Page Settings',
+		'id'         => 'post-setting',
+		'post_types' => array('page'), // List of taxonomies. Array or string
+		'priority'	=> 'low',
+		'include'	=> array(
+				'template' => array('elements/office-wise.php'),
+
+			),
+
+		'fields' => array(
+			array(
+				'id' => 'office_sectionheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Title', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'office_sectioncontents',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+		),
+	);
+
+//OFFICEWISE meta boxes :: END
+
 
 	$meta_boxes[] = array(
 		'title'      => 'FAQ Settings',
