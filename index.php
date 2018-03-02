@@ -17,8 +17,6 @@
 	so to get the url of the image BY id use wp_get_attachment_image_src( $image_id, $image_size = 'full' || 'large' || 'medium' || 'thumbnail' );
 */
 $banner_id = get_post_meta( $post->ID, 'top_banner', true ); 
-$section_image_1 = get_post_meta( $post->ID, 'sectionimage', true ); 
-$section_image_2 = get_post_meta( $post->ID, 'sectionimage_2', true ); 
 
 if($banner_id != null){
 	// like this
@@ -27,6 +25,8 @@ if($banner_id != null){
 	$banner = $banner[0];
 }
 
+$section_image_1 = get_post_meta( $post->ID, 'sectionimage', true ); 
+$section_image_2 = get_post_meta( $post->ID, 'sectionimage_2', true ); 
 
 get_header(); ?>
 	<div>

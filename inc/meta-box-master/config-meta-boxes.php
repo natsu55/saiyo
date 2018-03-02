@@ -176,10 +176,133 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'media_buttons' => true,
 				),
 			),
-
 		),
 	);
 //KNOWCOMPANY meta boxes :: END
+
+//PROFILEBOX meta boxes :: START
+	$meta_boxes[] = array(
+		'title'      => 'Page Settings',
+		'id'         => 'post-setting',
+		'post_types' => array('page'), // List of taxonomies. Array or string
+		'priority'	=> 'low',
+		'include'	=> array(
+				'template' => array('elements/profile-box.php'),
+
+			),
+
+		'fields' => array(
+			array(
+				'id' => 'sectionheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Title', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'sectioncontents',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+
+			//Profile Items
+			array(
+				'name' => __( 'Profile Box 1', ThemeDomain ),
+				'id'   => 'profimg_1',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Profile Box 2', ThemeDomain ),
+				'id'   => 'profimg_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Profile Box 3', ThemeDomain ),
+				'id'   => 'profimg_3',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Profile Box 4', ThemeDomain ),
+				'id'   => 'profimg_4',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'proftxt_4',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+		),
+	);
+//PROFILEBOX meta boxes :: END
 
 //KNOWPEOPLE meta boxes :: START
 	$meta_boxes[] = array(
@@ -194,18 +317,43 @@ function gm_register_meta_boxes( $meta_boxes ) {
 
 		'fields' => array(
 			array(
+				'id' => 'sectionheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '社員インタビュー', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
 				'name' => __( 'Top Banner Image', ThemeDomain ),
 				'id'   => 'top_banner',
 				'type' => 'image_upload',
 				'max_file_uploads' => 1,
 				'max_status'       => false,
 			),
-
-			//SECTION HOME-1
 			array(
-				'id' => 'sectionheading',
+				'id' => 'bannertext',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( '大同生命保険について', ThemeDomain ),
+				'name' => esc_html__( 'Banner Text', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//SECTION KNOWPEOPLE-1
+			array(
+				'id' => 'paraheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '1st Section', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -215,6 +363,326 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'media_buttons' => true,
 				),
 			),
+			array(
+				'id' => 'paracontent',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Section Image', ThemeDomain ),
+				'id'   => 'paraimage',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			//SECTION KNOWPEOPLE-2
+			array(
+				'id' => 'paraheading_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '2nd Section', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Section Image', ThemeDomain ),
+				'id'   => 'paraimage_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			//SECTION KNOWPEOPLE-3
+			array(
+				'id' => 'paraheading_3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '3rd Section', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent_3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Section Image', ThemeDomain ),
+				'id'   => 'paraimage_3',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			//SECTION PEOPLELIST
+			array(
+				'id' => 'paraheading_list',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Employee List', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//PERSON 1
+			array(
+				'name' => __( 'Employee 1', ThemeDomain ),
+				'id'   => 'empimage_1',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'emp_time_1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_time_1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_desc_1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 2,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//PERSON 1
+			array(
+				'name' => __( 'Employee 2', ThemeDomain ),
+				'id'   => 'empimage_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'emp_time_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_desc_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 2,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//PERSON 3
+			array(
+				'name' => __( 'Employee 3', ThemeDomain ),
+				'id'   => 'empimage_3',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'emp_time_3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_desc_3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 2,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//PERSON 4
+			array(
+				'name' => __( 'Employee 5', ThemeDomain ),
+				'id'   => 'empimage_4',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'emp_time_4',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_desc_4',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 2,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//PERSON 5
+			array(
+				'name' => __( 'Employee 5', ThemeDomain ),
+				'id'   => 'empimage_5',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'emp_time_5',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_desc_5',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 2,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//PERSON 6
+			array(
+				'name' => __( 'Employee 6', ThemeDomain ),
+				'id'   => 'empimage_6',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
+				'id' => 'emp_time_6',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Time', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'emp_desc_6',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Work Description', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 2,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+
 
 		),
 	);
