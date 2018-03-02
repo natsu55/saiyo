@@ -116,14 +116,13 @@ add_action( 'widgets_init', 'luggage_widgets_init' );
 function luggage_scripts() {
 	wp_enqueue_style( 'saiyo-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css' );
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
-	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '	
+    wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css' );
+    wp_enqueue_style( 'saiyo-font', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css' );
+    wp_enqueue_style( 'saiyo-konnect', get_template_directory_uri() . '/css/konnect-slider.css' );
+    wp_enqueue_style( 'saiyo-animate', get_template_directory_uri() . '/css/animate.css' );
+    wp_enqueue_style( 'saiyo-theme', get_template_directory_uri() . '/css/theme.css' );
+    wp_enqueue_style( 'saiyo-red', get_template_directory_uri() . '/css/red.css' );
+    wp_enqueue_style( 'saiyo-custom', get_template_directory_uri() . '/css/custom.css' );
 
 	wp_enqueue_script( 'saiyo-jquery', get_template_directory_uri() . '/assets/jquery/jquery.min.js', array(), '', true );
 	wp_enqueue_script( 'saiyo-customizer', get_template_directory_uri() . '/js/customizer.js', array(), '', true );
