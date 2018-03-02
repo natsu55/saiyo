@@ -37,7 +37,7 @@
 				<!-- Top bar Left -->
 				<div class="col-md-12 col-sm-12 hidden-xs">
 					<ul>
-						<li>企業保証のエキスパート | 大同生命 採用サイト</li>
+						<li><?php echo get_bloginfo('description'); ?></li>
 					</ul>
 				</div>
 			</div>
@@ -52,43 +52,35 @@
 				<!-- Responsive Menu -->
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span>
-					<img src="img/icons/menu.png" alt="menu" width="40">
+					<img src="<?php echo(get_template_directory_uri())?>/img/icons/menu.png" alt="menu" width="40">
 				</button>
 				<!-- Logo -->
 				<a class="navbar-brand" href="/">
-					<img class="logo-change" src="img/logo.png" alt="logo">
+					<img class="logo-change" src="<?php header_image() ?>" alt="logo">
 				</a>
 			</div>
-
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'nav navbar-nav navbar-right' ) ); ?>
-			</div><!-- #site-navigation -->
 
 			<!-- Menu Items -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="/KnowCompany.php">会社を知る</a>
-					</li>
-					<li>
-						<a href="/KnowPeople.php">人を知る</a>
-					</li>
-					<li>
-						<a href="/FAQ.php">FAQ</a>
-					</li>
-					<li>
-						<a href="#">採用情報</a>
-					</li>
+					<?php 
+						$nav_items = wp_get_nav_menu_items('Menu');
+						
+						foreach ($nav_items AS $nav_item){
+							echo '<li><a href="'.$nav_item->url.'" title="'.$nav_item->title.'">'.$nav_item->title.'</a></li>';
+						}
+					?>
 
 				</ul>
 				<div class="right-entry">
 					<div class="entry-text">
 						<ul>
-							<li class="font-14">
-								<span>今すぐ応募する</span>
+							<li class="font-14 entry-nav">
+								<?php
+									$entry_nav = wp_get_nav_menu_items('Entry')[0];
+									echo '<a href="'.$entry_nav->url.'" title="'.$entry_nav->title.'">'.$entry_nav->title.'</a>';
+								?>
 							</li>
-							<li class="font-14">ENTRY</li>
 						</ul>
 					</div>
 				</div>
