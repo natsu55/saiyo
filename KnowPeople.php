@@ -1,6 +1,18 @@
-<?php 
-    include_once("elements/header.php");
-?>
+<?php
+/**
+ * Template Name: FAQ
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package luggage
+ */
+
+get_header(); ?>
 <header class="inner">
 	<!-- Banner -->
 	<div class="header-content">
@@ -154,6 +166,5 @@
 </section>
 
 <?php
-	include_once("elements/office-wise.php");
-    include_once("elements/footer.php");
-?>
+//get_sidebar();
+get_footer();

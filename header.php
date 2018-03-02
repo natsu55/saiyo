@@ -21,30 +21,80 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', ThemeDomain ); ?></a>
+	<!-- Pre Loader -->
+	<div class="loading">
+		<div class="loader"></div>
+	</div>
+	<!-- Scroll to Top -->
+	<a id="scroll-up">
+		<i class="fa fa-angle-up"></i>
+	</a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<!-- Top Bar  -->
+	<div class="konnect-info">
+		<div class="container">
+			<div class="row">
+				<!-- Top bar Left -->
+				<div class="col-md-12 col-sm-12 hidden-xs">
+					<ul>
+						<li>企業保証のエキスパート | 大同生命 採用サイト</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', ThemeDomain ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<!-- Main Navigation + LOGO Area -->
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+		<div class="container container-fluid">
+			<div class="navbar-header">
+				<!-- Responsive Menu -->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<img src="img/icons/menu.png" alt="menu" width="40">
+				</button>
+				<!-- Logo -->
+				<a class="navbar-brand" href="/">
+					<img class="logo-change" src="img/logo.png" alt="logo">
+				</a>
+			</div>
 
-	<div id="content" class="site-content">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'nav navbar-nav navbar-right' ) ); ?>
+			</div><!-- #site-navigation -->
+
+			<!-- Menu Items -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="/KnowCompany.php">会社を知る</a>
+					</li>
+					<li>
+						<a href="/KnowPeople.php">人を知る</a>
+					</li>
+					<li>
+						<a href="/FAQ.php">FAQ</a>
+					</li>
+					<li>
+						<a href="#">採用情報</a>
+					</li>
+
+				</ul>
+				<div class="right-entry">
+					<div class="entry-text">
+						<ul>
+							<li class="font-14">
+								<span>今すぐ応募する</span>
+							</li>
+							<li class="font-14">ENTRY</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
