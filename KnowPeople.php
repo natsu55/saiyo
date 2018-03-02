@@ -23,14 +23,7 @@ if($banner_id != null){
 $paraimage_1 = get_post_meta( $post->ID, 'paraimage', true ); 
 $paraimage_2 = get_post_meta( $post->ID, 'paraimage_2', true ); 
 $paraimage_3 = get_post_meta( $post->ID, 'paraimage_3', true ); 
-/*
-$empimage_1 = get_post_meta( $post->ID, 'empimage_1', true ); 
-$empimage_2 = get_post_meta( $post->ID, 'empimage_2', true ); 
-$empimage_3 = get_post_meta( $post->ID, 'empimage_3', true ); 
-$empimage_4 = get_post_meta( $post->ID, 'empimage_4', true ); 
-$empimage_5 = get_post_meta( $post->ID, 'empimage_5', true ); 
-$empimage_6 = get_post_meta( $post->ID, 'empimage_6', true ); 
-*/
+
 
 get_header(); ?>
 <header class="inner">
@@ -129,57 +122,12 @@ get_header(); ?>
                 } while ($img);
 
             ?>
-            <?php /*
-            
-                <div class="col-md-2 col-sm-4 sp-padding-horizontal-10 text-align-left">
-                    <a href="#" class="ratio ratio_1_1" style="background-image: url(<?php echo wp_get_attachment_image_src( $empimage_1, 'full' )[0]; ?>)"></a>
-                    <?php echo get_post_meta( $post->ID, 'emp_time_1', true ); ?>
-                    <?php echo get_post_meta( $post->ID, 'emp_desc_1', true ); ?>
-                </div>
-                <div class="col-md-2 col-sm-4 sp-padding-horizontal-10 text-align-left">
-                    <a href="#" class="ratio ratio_1_1" style="background-image: url(<?php echo wp_get_attachment_image_src( $empimage_2, 'full' )[0]; ?>)"></a>
-                    <?php echo get_post_meta( $post->ID, 'emp_time_2', true ); ?>
-                    <?php echo get_post_meta( $post->ID, 'emp_desc_2', true ); ?>
-                </div>
-                <div class="col-md-2 col-sm-4 sp-padding-horizontal-10 text-align-left">
-                    <a href="#" class="ratio ratio_1_1" style="background-image: url(<?php echo wp_get_attachment_image_src( $empimage_3, 'full' )[0]; ?>)"></a>
-                    <?php echo get_post_meta( $post->ID, 'emp_time_3', true ); ?>
-                    <?php echo get_post_meta( $post->ID, 'emp_desc_3', true ); ?>
-                </div>
-                <div class="col-md-2 col-sm-4 sp-padding-horizontal-10 text-align-left">
-                    <a href="#" class="ratio ratio_1_1" style="background-image: url(<?php echo wp_get_attachment_image_src( $empimage_4, 'full' )[0]; ?>)"></a>
-                    <?php echo get_post_meta( $post->ID, 'emp_time_4', true ); ?>
-                    <?php echo get_post_meta( $post->ID, 'emp_desc_4', true ); ?>
-                </div>
-                <div class="col-md-2 col-sm-4 sp-padding-horizontal-10 text-align-left">
-                    <a href="#" class="ratio ratio_1_1" style="background-image: url(<?php echo wp_get_attachment_image_src( $empimage_5, 'full' )[0]; ?>)"></a>
-                    <?php echo get_post_meta( $post->ID, 'emp_time_5', true ); ?>
-                    <?php echo get_post_meta( $post->ID, 'emp_desc_5', true ); ?>
-                </div>
-                <div class="col-md-2 col-sm-4 sp-padding-horizontal-10 text-align-left">
-                    <a href="#" class="ratio ratio_1_1" style="background-image: url(<?php echo wp_get_attachment_image_src( $empimage_6, 'full' )[0]; ?>)"></a>
-                    <?php echo get_post_meta( $post->ID, 'emp_time_6', true ); ?>
-                    <?php echo get_post_meta( $post->ID, 'emp_desc_6', true ); ?>
-                </div>
-                */?>
             </div>
         </div>
     </div>
-
-    <!-- <div class="container padding-vertical-40">
-        <div class="row custom-sp-row">
-            <div class="col-sm-12 sp-padding-horizontal-10">
-                <h2 class="para-heading">最後になにか一言お願いします</h2>
-                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
-            </div>
-            <div class="col-sm-12 sp-no-padding">
-                <img src="/img/interview-bottom.png" alt="" srcset="" width="100%" height="auto">
-            </div>
-        </div>
-    </div> -->
-
 </section>
 
 <?php
 //get_sidebar();
+include_once("elements/office-wise.php");
 get_footer();

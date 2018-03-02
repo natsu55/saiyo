@@ -19,8 +19,8 @@ $postID = get_page_by_title( 'Profile Box' )->ID;
 	<div class="container">
 		<div>
 			<div>
-				<?php echo get_post_meta( $postID, 'sectionheading' . $i, true ); ?>
-				<?php echo get_post_meta( $postID, 'sectioncontents' . $i, true ); ?>
+				<?php echo get_post_meta( $postID, 'prof_sectionheading' . $i, true ); ?>
+				<?php echo get_post_meta( $postID, 'prof_sectioncontents' . $i, true ); ?>
 				<div class="template-space"></div>
 			</div>
 			<div class="row row-eq-height">
