@@ -11,6 +11,14 @@
  *
  * @package luggage
  */
+$section_image_1 = get_post_meta( $post->ID, 'sectionimage', true ); 
+$section_image_2 = get_post_meta( $post->ID, 'sectionimage_2', true ); 
+$section_image_3 = get_post_meta( $post->ID, 'sectionimage_3', true ); 
+$section_image_4 = get_post_meta( $post->ID, 'sectionimage_4', true ); 
+$section_image_5 = get_post_meta( $post->ID, 'sectionimage_5', true ); 
+$section_image_6 = get_post_meta( $post->ID, 'sectionimage_6', true ); 
+
+
 
 get_header(); ?>
 <header class="inner">
@@ -35,7 +43,7 @@ get_header(); ?>
                 <div class="template-space"></div>
             </div>
             <div class="col-sm-6 col-sm-push-6 sp-no-padding">
-                <img src="/img/about-office.png" class="image-responsive">
+                <img src="<?php echo wp_get_attachment_image_src( $section_image_1, 'full' )[0]; ?>" class="image-responsive">
             </div>
             <div class="col-sm-6 col-sm-pull-6 sp-padding-horizontal-10">
                <?php echo get_post_meta( $post->ID, 'paraheading1', true ); ?>

@@ -152,17 +152,15 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				'template' => array('KnowCompany.php'),
 
 			),
-
 		'fields' => array(
+			//SECTION KNOWCOMPANY_1
 			array(
-				'name' => __( 'Top Banner Image', ThemeDomain ),
-				'id'   => 'top_banner',
+				'name' => __( '大同生命保険についての画像', ThemeDomain ),
+				'id'   => 'sectionimage',
 				'type' => 'image_upload',
 				'max_file_uploads' => 1,
 				'max_status'       => false,
 			),
-
-			//SECTION KNOWCOMPANY_1
 			array(
 				'id' => 'sectionheading1',
 				'type' => 'wysiwyg',
@@ -204,6 +202,13 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			),
 			//SECTION KNOWCOMPANY_2
 			array(
+				'name' => __( '① 訪問先は企業の画像', ThemeDomain ),
+				'id'   => 'sectionimage_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			array(
 				'id' => 'sectionheading2',
 				'type' => 'wysiwyg',
 				'name' => esc_html__( '大同生命保険の仕事とは', ThemeDomain ),
@@ -219,7 +224,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 			array(
 				'id' => 'paraheading2',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'Section Heading', ThemeDomain ),
+				'name' => esc_html__( '① 訪問先は企業', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
