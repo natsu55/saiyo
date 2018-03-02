@@ -22,6 +22,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 	// 	),
 	// );
 
+//HOME meta boxes :: START
 	$meta_boxes[] = array(
 		'title'      => 'Page Settings',
 		'id'         => 'post-setting',
@@ -40,10 +41,38 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				'max_file_uploads' => 1,
 				'max_status'       => false,
 			),
+
+			//SECTION HOME-1
 			array(
-				'id' => 'first_texts',
+				'id' => 'sectionheading',
 				'type' => 'wysiwyg',
-				'name' => esc_html__( 'First text ', ThemeDomain ),
+				'name' => esc_html__( '大同生命保険について', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paraheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Heading', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'sectioncontent',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
 				'clone' => false,
 				'sort_clone' => false,
@@ -53,8 +82,68 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'media_buttons' => true,
 				),
 			),
+			array(
+				'name' => __( 'Section Image', ThemeDomain ),
+				'id'   => 'sectionimage',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+			//SECTION HOME-2
+			array(
+				'id' => 'sectionheading_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '大同生命保険で働くこと', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paraheading_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Heading', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'sectioncontent_2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'name' => __( 'Section Image', ThemeDomain ),
+				'id'   => 'sectionimage_2',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+
 		),
 	);
+//HOME meta boxes :: END
+
+//KNOWPEOPLE meta boxes :: START
+
+//KNOWPEOPLE meta boxes :: END
 
 	$meta_boxes[] = array(
 		'title'      => 'FAQ Settings',
