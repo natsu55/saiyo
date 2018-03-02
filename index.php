@@ -12,13 +12,18 @@
  * @package luggage
  */
 
-
+// for image in get_post meta it will get the ID of the image
+/*
+	so to get the url of the image BY id use wp_get_attachment_image_src( $image_id, $image_size = 'full' || 'large' || 'medium' || 'thumbnail' );
+*/
 $banner_id = get_post_meta( $post->ID, 'top_banner', true ); 
 
 
 
 if($banner_id != null){
+	// like this
 	$banner = wp_get_attachment_image_src( $banner_id, 'full' );
+	// then it will become array, just get the first one
 	$banner = $banner[0];
 }
 
@@ -94,7 +99,11 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-<?php echo theme_option('example_textarea') ?>	
+
+
+<?php 
+// use theme_option($id_field) for global settings
+echo theme_option('example_textarea') ?>	
 <?php echo theme_option('example_uploader') ?>
 
 					
