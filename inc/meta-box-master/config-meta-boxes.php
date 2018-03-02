@@ -162,9 +162,9 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				'max_status'       => false,
 			),
 
-			//SECTION HOME-1
+			//SECTION KNOWCOMPANY_1
 			array(
-				'id' => 'sectionheading',
+				'id' => 'sectionheading1',
 				'type' => 'wysiwyg',
 				'name' => esc_html__( '大同生命保険について', ThemeDomain ),
 				'desc' => esc_html__( '---', ThemeDomain ),
@@ -176,7 +176,194 @@ function gm_register_meta_boxes( $meta_boxes ) {
 					'media_buttons' => true,
 				),
 			),
-
+			array(
+				'id' => 'paraheading1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Heading', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent1',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//SECTION KNOWCOMPANY_2
+			array(
+				'id' => 'sectionheading2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '大同生命保険の仕事とは', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paraheading2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Heading', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent2',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+            //KNOWCOMPANY SECTION HEADING ② 完全週休二日制、毎日17時に退社 
+			array(
+				'id' => 'paraheading3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '② 完全週休二日制', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent3',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//KNOWCOMPANY SECTION HEADING ③ 未経験からでも安心できる充実の研修制度 
+			array(
+				'id' => 'paraheading4',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '③ 未経験からでも安心できる充実の研修制度', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent4',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//KNOWCOMPANY SECTION HEADING ④ 正社員、がんばり次第で収入アップも可！ 
+			array(
+				'id' => 'paraheading5',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '④ 正社員、がんばり次第で収入アップも可！', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paracontent5',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Section Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//KNOWCOMPANY SECTION HEADING 会社概要 HEADING TABLE！ 
+			array(
+				'id' => 'paratableheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '会社概要', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			array(
+				'id' => 'paratablecontent',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'Table Contents', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 8,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+			//KNOWCOMPANY SECTION HEADING GOOGLE MAP！ 
+			array(
+				'id' => 'googlemap',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '会社概要', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 6,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
 		),
 	);
 //KNOWCOMPANY meta boxes :: END
