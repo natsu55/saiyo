@@ -100,12 +100,6 @@ get_header(); ?>
 		</div>
 	</section>
 
-
-<?php 
-// use theme_option($id_field) for global settings
-echo theme_option('example_textarea') ?>	
-<?php echo theme_option('example_uploader') ?>
-
 					
 <?php
 //get_sidebar();//
