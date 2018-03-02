@@ -133,22 +133,22 @@ function optionsframework_options() {
 	// );
 
 
-	$options[] = array(
-		'name' => __( 'tumblr Link', ThemeDomain ),
-		'desc' => __( '.', ThemeDomain ),
-		'id' => 'tumblr-link',
-		'std' => '#tumblr',
-		'type' => 'text'
-	);
+	//$options[] = array(
+	//	'name' => __( 'tumblr Link', ThemeDomain ),
+	//	'desc' => __( '.', ThemeDomain ),
+	//	'id' => 'tumblr-link',
+	//	'std' => '#tumblr',
+	//	'type' => 'text'
+	//);
 
 
-	$options[] = array(
-		'name' => __( 'Facebook Link', ThemeDomain ),
-		'desc' => __( '.', ThemeDomain ),
-		'id' => 'facebook-link',
-		'std' => '#fb',
-		'type' => 'text'
-	);
+	//$options[] = array(
+	//	'name' => __( 'Facebook Link', ThemeDomain ),
+	//	'desc' => __( '.', ThemeDomain ),
+	//	'id' => 'facebook-link',
+	//	'std' => '#fb',
+	//	'type' => 'text'
+	//);
 
 
 	// $options[] = array(
@@ -159,13 +159,13 @@ function optionsframework_options() {
 	// 	'type' => 'text'
 	// );
 
-	$options[] = array(
-		'name' => __( 'Textarea', ThemeDomain ),
-		'desc' => __( 'Textarea description.', ThemeDomain ),
-		'id' => 'example_textarea',
-		'std' => 'Default Text',
-		'type' => 'textarea'
-	);
+	//$options[] = array(
+	//	'name' => __( 'Textarea', ThemeDomain ),
+	//	'desc' => __( 'Textarea description.', ThemeDomain ),
+	//	'id' => 'example_textarea',
+	//	'std' => 'Default Text',
+	//	'type' => 'textarea'
+	//);
 
 	// $options[] = array(
 	// 	'name' => __( 'Input Select Small', ThemeDomain ),
