@@ -177,6 +177,7 @@ function luggage_scripts() {
     wp_enqueue_style( 'saiyo-custom', get_template_directory_uri() . '/css/custom.css' );
 
 	wp_enqueue_script( 'saiyo-jquery', get_template_directory_uri() . '/assets/jquery/jquery.min.js', array(), '', true );
+	wp_enqueue_script( 'saiyo-bootstrap-query', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array(), '', true );
 	wp_enqueue_script( 'saiyo-customizer', get_template_directory_uri() . '/js/customizer.js', array(), '', true );
 	wp_enqueue_script( 'saiyo-default', get_template_directory_uri() . '/js/default.js', array(), '', true );
 	wp_enqueue_script( 'saiyo-ellipsis', get_template_directory_uri() . '/js/ellipsis.min.js', array(), '', true );
