@@ -3,21 +3,55 @@ add_filter( 'rwmb_meta_boxes', 'gm_register_meta_boxes' );
 function gm_register_meta_boxes( $meta_boxes ) {
 	$prefix = 'gm_';
 
+	// $meta_boxes[] = array(
+	// 	'title'      => 'Standard Fields',
+	// 	'id'         => 'standard',
+	// 	'post_types' => array('page'),
+	// 	//'taxonomies' => array('category','post_tag','keyword'), // List of taxonomies. Array or string
+	// 	'fields' => array(
+	// 		array(
+	// 			'name' => __( 'Category Image', ThemeDomain ),
+	// 			'id'   => 'image_advanced',
+	// 			'type' => 'image_advanced',
+	// 		),
+	// 		array(
+	// 			'name' => __( 'Order', ThemeDomain ),
+	// 			'id'   => 'meta_order',
+	// 			'type' => 'text',
+	// 		),
+	// 	),
+	// );
+
 	$meta_boxes[] = array(
-		'title'      => 'Standard Fields',
-		'id'         => 'standard',
-		'post_types' => array('page'),
-		//'taxonomies' => array('category','post_tag','keyword'), // List of taxonomies. Array or string
+		'title'      => 'Page Settings',
+		'id'         => 'post-setting',
+		'post_types' => array('page'), // List of taxonomies. Array or string
+		'priority'	=> 'low',
+		'include'	=> array(
+				'template' => array('index.php'),
+
+			),
+
 		'fields' => array(
 			array(
-				'name' => __( 'Category Image', ThemeDomain ),
-				'id'   => 'image_advanced',
-				'type' => 'image_advanced',
+				'name' => __( 'Top Banner Image', ThemeDomain ),
+				'id'   => 'top_banner',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
 			),
 			array(
-				'name' => __( 'Order', ThemeDomain ),
-				'id'   => 'meta_order',
-				'type' => 'text',
+				'id' => 'first_texts',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( 'First text ', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 4,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
 			),
 		),
 	);

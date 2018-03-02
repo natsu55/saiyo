@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Home
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -12,14 +12,24 @@
  * @package luggage
  */
 
-get_header(); ?>
 
+$banner_id = get_post_meta( $post->ID, 'top_banner', true ); 
+
+
+
+if($banner_id != null){
+	$banner = wp_get_attachment_image_src( $banner_id, 'full' );
+	$banner = $banner[0];
+}
+
+
+get_header(); ?>
 	<div>
-		<img src="img/banner-top.png" alt="" class="img-banner">
+		<img src="<?php echo $banner; ?>" alt="" class="img-banner">
 	</div>
 	
 	<div class="container">
-		<a href="#" class="btn-show-more"><img src="/img/btn-1.png"><span>募集職種一覧を見る</span><img src="/img/btn-2.png"></a>
+		<a href="#" class="btn-show-more"><img src="<?php echo get_template_directory_uri(); ?>/img/btn-1.png"><span>募集職種一覧を見る</span><img src="<?php echo get_template_directory_uri(); ?>/img/btn-2.png"></a>
 	</div>
 
 
@@ -35,9 +45,9 @@ get_header(); ?>
 					<img src="/img/about-office.png" class="image-responsive">
 				</div>
 				<div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6 col-no-padding">
-					<h2 class="para-heading">大同生命保険で働く4つのポイント</h2>
-					<p >大同生命保険は、<span class="ru-text">プライベート・子育てもお仕事も頑張りたいあなたに、とってもピッタリなお仕事</span>です。<br>
-					大同生命保険で福利厚生プランナーとして働く<span class="ru-text">4つのポイント</span>があります。<br>①訪問先が企業だから、きちんと<span class="ru-text">プラベートと分けられる</span>こと②<span class="ru-text">完全週休2日制・ 17時15分退社</span>でプライベートや子育ての時間をしっかり充実させられること③<span class="ru-text">未経験者でも安心して働ける</span>、独自の研修制度とサポート体制④<span class="ru-text">平均給与38.9万円</span>(H28年度実績・賞与を含まず)で、頑張り次第で収入アップも見込めます、是非、あなたも大同生命保険で働いてみませんか？</p>
+					
+					<?php echo apply_filters( 'the_content', get_post_meta( $post->ID, 'first_texts', true ) ) ?>
+
 					<div class="btn-service">
 						<a class="service-box-button" href="/KnowCompany.php">詳しく見る</a>
 					</div>
