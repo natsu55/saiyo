@@ -1,0 +1,14 @@
+{
+  "name": "saiyo",
+  "version": "1.0.0",
+  "description": "Saiyo project",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": ".\\node_modules\\.bin\\node-sass .\\sass\\base.scss -w --output-style nested -o .\\css"
+  },
+  "author": "binh.vo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}

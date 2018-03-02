@@ -1,0 +1,58 @@
+h1,h2,h3,h4,h5,h6{
+	margin:0 0 25px;
+}
+
+.sub{
+	color:$sub-color;
+}
+
+p{
+	line-height:$default-line;
+	margin:0 0 20px;
+}
+
+h1{
+	font-size:30px;
+}
+
+h2{
+	font-size:28px;
+}
+
+h3{
+	font-weight:400;
+	font-size:24px;
+	margin:0 0 25px;
+}
+
+h4{
+	font-size:20px;
+	font-weight:400;
+}
+
+ h5{
+ 	font-size:17px;
+ }
+
+ h6{
+ 	font-size:16px;
+ 	font-weight: 400;
+ }
+
+
+.section-title{
+	text-align:center;
+	margin:0 0 35px;
+
+	h2{
+		padding:0 0 20px;
+		margin:0;
+		font-weight: 400;
+	}
+
+	&:after{
+		@include use-sprite('border',on);
+		margin:0 auto;
+		content:"";
+	}
+}

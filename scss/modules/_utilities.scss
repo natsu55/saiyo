@@ -65,6 +65,7 @@ $icons: sprite-map("sprite/*.png", $layout: smart);
 
 @mixin use-sprite($sprite, $block: off) {
 
+
 	@if $block == off {
 	    background-image: sprite-url($icons);
 	    background-position: sprite-position($icons, $sprite);
@@ -79,10 +80,30 @@ $icons: sprite-map("sprite/*.png", $layout: smart);
 	    background-repeat: no-repeat;
 	    overflow: hidden;
 	    display: block;
-	    height: image-height(sprite-file($icons, $sprite)) !important;
-	    width: image-width(sprite-file($icons, $sprite)) !important;
+	    height: image-height(sprite-file($icons, $sprite));
+	    width: image-width(sprite-file($icons, $sprite));
 	}
 
+}
+
+@mixin icon-sprite($sprite,$center:off,$shadow:off){
+	@include use-sprite($sprite,on);
+	$shadowNo:0;
+	@if $shadow == on {
+		$shadowNo:2;
+	}
+	$height: (image-height(sprite-file($icons, $sprite)) - $shadowNo);
+	$width: (image-width(sprite-file($icons, $sprite)) - $shadowNo);
+	display:block;
+	position:absolute;
+	content:"";
+	top:50%;
+	margin-top:-($height/2);
+
+	@if $center == on {
+		left:50%;
+		margin-left:-($width/2);
+	}
 }
 
 @mixin line {

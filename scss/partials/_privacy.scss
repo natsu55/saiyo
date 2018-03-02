@@ -1,0 +1,57 @@
+
+
+.privacy-textarea {
+	overflow-y: scroll;
+	line-height:1.5;
+}
+.privacy-textarea strong {
+	color: #000;
+	text-decoration: underline;
+	font-size: 12px;
+}
+.privacy-textarea p {
+	margin: 0 0 15px;
+    font-size:12px;
+    text-align: left;
+}
+.privacy-textarea *{
+    text-align: left;
+}
+
+.privacy-textarea h6 {
+	font-size: 14px;
+	margin: 0 0 15px;
+	font-weight: 600;
+	text-align: center;
+}
+.privacy-textarea .block {
+	display: block;
+	margin: 10px 0;
+}
+.privacy-textarea ol{
+	line-height: 1.5;
+	margin: 10px 0 10px 15px;
+	counter-reset: item;
+}
+.privacy-textarea ol .block {
+	padding: 0 10px;
+}
+.privacy-textarea ol li {
+	display: block;
+	margin: 5px 0;
+}
+
+.privacy-textarea ul li{
+	margin:5px 0;
+}
+.privacy-textarea ol li li:before {
+	content: counter(item);
+}
+.privacy-textarea ol li:before {
+	display: inline-block;
+	content: "(" counter(item) ") ";
+	counter-increment: item;
+	width: 1.5em;
+	margin-left: -2em;
+	font-weight: 600;
+}

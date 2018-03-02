@@ -14,12 +14,13 @@ textarea {
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	-ms-appearance:none;
-
+	border:1px solid #d3d3d3;
 	 @include border-radius(0);
-
+	font-size:16px;
+	font-family:$kozuka-font;
 	&:focus,
 	&:active {
-		
+
 	}
 }
 
@@ -39,7 +40,10 @@ input[type="password"],
 input[type="search"],
 input[type="submit"],
 select{
-	height:40px;
+	height:55px;
+	background:#fff;
+	padding:0 15px;
+	width:100%;
 }
 
 input[type="checkbox"],
@@ -66,7 +70,154 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 textarea {
+	background:#fff;
+	min-height:160px;
 	width: 100%;
+	padding:10px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+}
+
+.privacy-container {
+	background:#fff;
+	border:1px solid #555;
+	min-height:160px;
+	width: 100%;
+	padding:10px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+}
+
+
+label{
+	font-size:16px;
+	margin-bottom:13px;
+	display:block;
+}
+
+.input-field{
+	display: block;
+	padding:5px 0;
+	margin:0 0 15px;
+
+	&:after{
+		display: block;
+		content:"";
+		clear:both;
+	}
+
+	label{
+		margin-right:-180px;
+		width: 180px;
+		float:left;
+		padding:0 25px 0 0;
+		line-height: 1.5;
+		position: relative;
+		z-index: 5;
+
+		span{
+			color:$sub-color;
+		}
+	}
+
+	.input-container{
+		width: 100%;
+		float:right;
+		padding-left:180px;
+	}
+
+
+}
+
+
+.input-privacy{
+	max-width: 780px;
+	margin:45px auto 0;
+	text-align: center;
+}
+
+.privacy-container{
+	text-align:left;
+	min-height:0;
+	height:130px;
+	overflow:auto;
+}
+
+.input-checkbox{
+	margin:20px 0 0;
+
+	input[type="checkbox"],
+	label{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	label{
+		margin:0 0 5px;
+	}
+
+	input[type="checkbox"]{
+		margin-right:20px;
+		width: 18px;
+		height: 18px;
+	}
+}
+
+input[type="submit"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    overflow: hidden;
+    display: block;
+    height: 45px;
+    width: 168px;
+    border: none;
+    margin: 40px auto 0;
+    text-decoration: none ;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 20px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: $sub-color;
+    font-family:$kozuka-font;
+    letter-spacing: 2px;
+
+    @include box-shadow( 0px 1px 1px 0px rgba(122, 3, 23, 1));
+    @include single-transition(all,0.2s, linear);
+
+    &:hover{
+    	background:$default-color;
+    }
+}
+
+.check-inline,
+.check-block{
+	padding:20px 0;
+}
+
+.check-field{
+	margin:0 0 10px;
+
+	.check-inline &{
+		display: inline-block;
+		margin-right:85px;
+	}
+
+	input[type="checkbox"]{
+		width: 16px;
+		height: 16px;
+		margin-right:20px;
+	}
+
+	span{
+		font-size:16px;
+	}
+}
+
+.check-field-container{
 }

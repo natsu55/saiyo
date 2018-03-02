@@ -20,9 +20,9 @@ function luggage_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on luggage, use a find and replace
-	 * to change 'luggage' to the name of your theme in all the template files.
+	 * to change ThemeDomain to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'luggage', get_template_directory() . '/languages' );
+	load_theme_textdomain( ThemeDomain, get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function luggage_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'luggage' ),
+		'primary' => esc_html__( 'Primary', ThemeDomain ),
 	) );
 
 	/*
@@ -99,9 +99,9 @@ add_action( 'after_setup_theme', 'luggage_content_width', 0 );
  */
 function luggage_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'luggage' ),
+		'name'          => esc_html__( 'Sidebar', ThemeDomain ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'luggage' ),
+		'description'   => esc_html__( 'Add widgets here.', ThemeDomain ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -114,11 +114,20 @@ add_action( 'widgets_init', 'luggage_widgets_init' );
  * Enqueue scripts and styles.
  */
 function luggage_scripts() {
-	wp_enqueue_style( 'luggage-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'saiyo-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'luggage-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.css' );
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '
+	wp_enqueue_style( 'saiyo-bootstrap', get_template_directory_uri() . '	
 
-	wp_enqueue_script( 'luggage-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'saiyo-jquery', get_template_directory_uri() . '/assets/jquery/jquery.min.js', array(), '', true );
+
+	wp_enqueue_script( 'saiyo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -159,7 +168,13 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 
 define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/' );
-//require_once dirname( __FILE__ ) . '/inc/options-framework.php';
+require_once dirname( __FILE__ ) . '/inc/options-framework.php';
+
+define( 'RWMB_URL', trailingslashit( get_template_directory_uri() . '/inc/meta-box-master' ) );
+define( 'RWMB_DIR', trailingslashit( get_template_directory() . '/inc/meta-box-master' ) );
+require_once RWMB_DIR . 'meta-box.php';
+require_once RWMB_DIR . 'meta-box-include-exclude.php';
+include RWMB_DIR . 'config-meta-boxes.php';
 
 
 
@@ -187,3 +202,5 @@ jQuery(document).ready(function() {
 
 <?php
 }
+
+define("ThemeDomain", 'wonderful_wedding');

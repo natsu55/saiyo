@@ -1,8 +1,8 @@
 <?php
 /**
- * luggage Theme Customizer.
+ * tactical Theme Customizer.
  *
- * @package luggage
+ * @package tactical
  */
 
 /**
@@ -10,17 +10,18 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function luggage_customize_register( $wp_customize ) {
+function tactical_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header2_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'luggage_customize_register' );
+add_action( 'customize_register', 'tactical_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function luggage_customize_preview_js() {
-	wp_enqueue_script( 'luggage_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function tactical_customize_preview_js() {
+	wp_enqueue_script( 'tactical_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'luggage_customize_preview_js' );
+add_action( 'customize_preview_init', 'tactical_customize_preview_js' );

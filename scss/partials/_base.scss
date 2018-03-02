@@ -14,7 +14,7 @@ html *{
 body{
     font-family: $default;
     font-size:$default-size;
-    line-height:$default-line;
+    line-height:1;
     color:$default-color;
     font-weight: 400;
 }
@@ -140,10 +140,6 @@ textarea {
 
 .center{
     text-align: center;
-
-    *{
-        display: inline-block;
-    }
 }
 
 .list-unstyled{
@@ -163,11 +159,16 @@ textarea {
     &:after{
         @extend .clear;
     }
+
+    a{
+        display: block;
+    }
 }
 
  a {
     text-decoration: none;
     color:$sub-color;
+    @include single-transition(all,0.2s,linear);
 
     &:hover,
     .active &{
@@ -180,19 +181,26 @@ img{
     height: auto;
 }
 
+.full-bg{
+    content:"";
+    display: block;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0; 
+    z-index: 0;  
+}
+
 .bg-before{
     position:relative;
 
     &:before{
-        content:"";
-        display: block;
-        position:absolute;
-        width: 100%;
-        height: 100%;
-        top:0;
-        left:0;   
+        @extend .full-bg;
     }
 }
+
+
 
 .list-remove-style{
     padding:0;
@@ -205,61 +213,61 @@ img{
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+    // *,
+    // *:before,
+    // *:after {
+    //     background: transparent !important;
+    //     color: #000 !important;
+    //     box-shadow: none !important;
+    //     text-shadow: none !important;
+    // }
 
-    a,
-    a:visited {
-        text-decoration: none;
-    }
+    // a,
+    // a:visited {
+    //     text-decoration: none;
+    // }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+    // a[href]:after {
+    //     content: " (" attr(href) ")";
+    // }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+    // abbr[title]:after {
+    //     content: " (" attr(title) ")";
+    // }
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+    // a[href^="#"]:after,
+    // a[href^="javascript:"]:after {
+    //     content: "";
+    // }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+    // pre,
+    // blockquote {
+    //     border: 1px solid #999;
+    //     page-break-inside: avoid;
+    // }
 
-    thead {
-        display: table-header-group;
-    }
+    // thead {
+    //     display: table-header-group;
+    // }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+    // tr,
+    // img {
+    //     page-break-inside: avoid;
+    // }
 
-    img {
-        max-width: 100% !important;
-    }
+    // img {
+    //     max-width: 100% !important;
+    // }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+    // p,
+    // h2,
+    // h3 {
+    //     orphans: 3;
+    //     widows: 3;
+    // }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+    // h2,
+    // h3 {
+    //     page-break-after: avoid;
+    // }
 }

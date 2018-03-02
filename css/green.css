@@ -1,0 +1,232 @@
+/*------------------------------------
+    Green color style sheet
+	
+	just replace "1ABC9C" with your custom color
+------------------------------------*/
+a {
+	color: #1ABC9C;
+}
+p.template-para::first-letter {
+	color: #1ABC9C;
+}
+.color-default {
+	color: #1ABC9C;
+}
+.template-list li:before {
+	color: #1ABC9C;
+}
+.bg-primary {
+	background-color: #1ABC9C;
+}
+.text-primary {
+	color: #1ABC9C;
+}
+h2.para-heading {
+	color:#1ABC9C;
+}
+.section-heading:before {
+	background-color: #1ABC9C;
+}
+.section-heading:after {
+	background-color: #1ABC9C;
+}
+.theme-bg {
+	background: #1ABC9C;
+}
+ul.dot-ul li:before {
+	color: #1ABC9C;
+}
+#scroll-up {
+	background-color: #1ABC9C;
+}
+.loader {
+	border-top: 3px solid #1ABC9C;
+}
+div.konnect-info {
+	background: #1ABC9C;
+}
+.navbar-default .navbar-header .navbar-brand {
+	color: #1ABC9C;
+}
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
+	color: #1ABC9C;
+}
+.navbar-default .nav > li.active > a, .navbar-default .nav > li.active > a:focus {
+	color: #1ABC9C;
+}
+.navbar-default.affix .nav > li.active > a, .navbar-default.affix .nav > li.active > a:focus {
+	color: #1ABC9C !important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #1ABC9C;
+}
+.navbar-default li.search-icon a .fa {
+	color: #1ABC9C;
+}
+.search-form .form-control:focus {
+	border-color: #1ABC9C;
+}
+.search-form button {
+	background-color: #1ABC9C;
+}
+.dropdown-menu {
+	border-top: 3px solid #1ABC9C;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:active, .dropdown-menu > li > a:focus {
+	background-color: #1ABC9C;
+}
+.profile-box h4 span {
+	color: #1ABC9C;
+}
+.service-box-button {
+	background: #1ABC9C;
+}
+.img-box span {
+	background: #1ABC9C;
+}
+.post-more a {
+	background: #1ABC9C;
+}
+.template-readmore:hover {
+	background: #1ABC9C;
+}
+.post-preview a:hover, .post-preview a:focus {
+	color: #1ABC9C;
+}
+.pager li > a, .pager li > span {
+	background-color: #1ABC9C;
+	border: 1px solid #1ABC9C;
+}
+.pager li > a:hover, .pager li > a:focus, .pager li > a:active {
+	color: #1ABC9C;
+}
+.sidebar-post > a:hover {
+	color: #1ABC9C;
+}
+.sidebar-post > a::before {
+	color: #1ABC9C;
+}
+.sidebar-list li:before {
+	color: #1ABC9C;
+}
+.sidebar-list li a:hover, .sidebar-list li a:focus, .sidebar-list li a:active {
+	color: #1ABC9C;
+}
+.sidebar-tags a:hover, .sidebar-tags a:active, .sidebar-tags a:focus {
+	color: #1ABC9C;
+	border: 1px solid #1ABC9C;
+}
+.sidebar-cta {
+	background: #1ABC9C;
+}
+.sidebar-cta div {
+	background: #1ABC9C;
+}
+button.btn-download:hover, button.btn-download:active, button.btn-download:focus {
+	color: #1ABC9C;
+}
+h3.author-name {
+	color: #1ABC9C;
+}
+.post-meta a {
+	color: #1ABC9C;
+}
+.team-more a {
+	color: #1ABC9C;
+}
+.panel-title a:hover, .panel-title a[aria-expanded="true"] {
+	background-color: #1ABC9C;
+}
+#quote-carousel .carousel-indicators li {
+	background: #1ABC9C;
+}
+#quote-carousel .carousel-indicators .active {
+	background: #1ABC9C;
+}
+.template-form .form-control:focus {
+	border-color: #1ABC9C;
+}
+.konnect-form .form-control:focus {
+	border-color: #1ABC9C;
+}
+.footer-widget h3{
+	color:#1ABC9C;
+}
+.footer-widget .read-more {
+	background-color: #1ABC9C;
+}
+.footer-widget.address .fa {
+	color: #1ABC9C;
+}
+.footer-widget ul li .fa {
+	color: #1ABC9C;
+}
+.footer-widget ul li a:hover, .footer-widget ul li a:active, .footer-widget ul li a:focus {
+	color: #1ABC9C;
+}
+.btn-primary {
+	background-color: #1ABC9C;
+	border-color: #1ABC9C;
+}
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+	background-color: #1ABC9C;
+	border-color: #1ABC9C;
+}
+.btn-primary .badge {
+	color: #1ABC9C;
+}
+.template-button {
+	color: #1ABC9C;
+}
+.dark-bg .template-button {
+	background: #1ABC9C;
+}
+.template-button:hover, .template-button:focus, .template-button:active {
+	color: #1ABC9C;
+}
+.btn-facebook:hover {
+	color: #1ABC9C;
+}
+.btn-google:hover {
+	color: #1ABC9C;
+}
+.error-page ul li a {
+	background-color: #1ABC9C;
+}
+.carousel-image .big {
+	color: #1ABC9C;
+}
+.carousel-image .btn.btn-lg {
+	background: #1ABC9C;
+}
+.carousel-image-pagination .flex-control-paging a:hover, .carousel-image-pagination .flex-control-paging a.flex-active {
+	background-color: #1ABC9C;
+}
+.konnect-carousel:hover .flex-next, .konnect-carousel:hover .flex-prev {
+	border: 1px solid #1ABC9C;
+}
+.banner-bar .banner-bar-one {
+	background-color: #045444;
+}
+.banner-bar .banner-bar-two {
+	background-color: #137f6a;
+}
+.banner-bar .banner-bar-three {
+	background-color: #16a287;
+}
+ @media (max-width: 767px) {
+.navbar-default .nav > li.active > a, .navbar-default .nav > li.active > a:focus {
+	color: #1abc9c;
+}
+}
+ @media (min-width: 768px) {
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
+	color: #1ABC9C;
+}
+.navbar-default.affix .navbar-header .navbar-brand {
+	color: #1ABC9C;
+}
+.navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
+	color: #1ABC9C;
+}
+}
