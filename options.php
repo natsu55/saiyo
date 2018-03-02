@@ -103,7 +103,7 @@ function optionsframework_options() {
 	$options = array();
 
 	$options[] = array(
-		'name' => __( 'Social Settings', ThemeDomain ),
+		'name' => __( 'Footer Settings', ThemeDomain ),
 		'type' => 'heading'
 	);
 
@@ -117,9 +117,9 @@ function optionsframework_options() {
 	// );
 
 	$options[] = array(
-		'name' => __( 'Twitter Handle', ThemeDomain ),
-		'desc' => __( '.', ThemeDomain ),
-		'id' => 'twitter_handle',
+		'name' => __( 'Copyright', ThemeDomain ),
+		'desc' => __( ' © Copyright Daido Life Insurance Campany All Rights Reserved.', ThemeDomain ),
+		'id' => 'copyright_text',
 		'std' => 'handle',
 		'type' => 'text'
 	);

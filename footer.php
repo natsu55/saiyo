@@ -69,7 +69,7 @@
 				<div>
 					<!-- Footer Copy rights-->
 					<div class="col-md-12 text-center footer-copy-right">
-						<p> © Copyright Daido Life Insurance Campany All Rights Reserved.</p>
+						<p><?php echo theme_option('copyright_text') ?></p>
 					</div>
 				</div>
 			</div>
