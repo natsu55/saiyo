@@ -141,8 +141,83 @@ function gm_register_meta_boxes( $meta_boxes ) {
 	);
 //HOME meta boxes :: END
 
-//KNOWPEOPLE meta boxes :: START
 
+//KNOWCOMPANY meta boxes :: START
+	$meta_boxes[] = array(
+		'title'      => 'Page Settings',
+		'id'         => 'post-setting',
+		'post_types' => array('page'), // List of taxonomies. Array or string
+		'priority'	=> 'low',
+		'include'	=> array(
+				'template' => array('KnowCompany.php'),
+
+			),
+
+		'fields' => array(
+			array(
+				'name' => __( 'Top Banner Image', ThemeDomain ),
+				'id'   => 'top_banner',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+
+			//SECTION HOME-1
+			array(
+				'id' => 'sectionheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '大同生命保険について', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+
+		),
+	);
+//KNOWCOMPANY meta boxes :: END
+
+//KNOWPEOPLE meta boxes :: START
+	$meta_boxes[] = array(
+		'title'      => 'Page Settings',
+		'id'         => 'post-setting',
+		'post_types' => array('page'), // List of taxonomies. Array or string
+		'priority'	=> 'low',
+		'include'	=> array(
+				'template' => array('KnowPeople.php'),
+
+			),
+
+		'fields' => array(
+			array(
+				'name' => __( 'Top Banner Image', ThemeDomain ),
+				'id'   => 'top_banner',
+				'type' => 'image_upload',
+				'max_file_uploads' => 1,
+				'max_status'       => false,
+			),
+
+			//SECTION HOME-1
+			array(
+				'id' => 'sectionheading',
+				'type' => 'wysiwyg',
+				'name' => esc_html__( '大同生命保険について', ThemeDomain ),
+				'desc' => esc_html__( '---', ThemeDomain ),
+				'clone' => false,
+				'sort_clone' => false,
+				'options' => array(
+					'textarea_rows' => 1,
+					'teeny'         => false,
+					'media_buttons' => true,
+				),
+			),
+
+		),
+	);
 //KNOWPEOPLE meta boxes :: END
 
 	$meta_boxes[] = array(
