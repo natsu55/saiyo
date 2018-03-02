@@ -118,9 +118,9 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => __( 'Copyright', ThemeDomain ),
-		'desc' => __( ' © Copyright Daido Life Insurance Campany All Rights Reserved.', ThemeDomain ),
+		'desc' => __( 'description here', ThemeDomain ),
 		'id' => 'copyright_text',
-		'std' => 'handle',
+		'std' => '© Copyright Daido Life Insurance Campany All Rights Reserved.',
 		'type' => 'text'
 	);
 
@@ -159,13 +159,13 @@ function optionsframework_options() {
 	// 	'type' => 'text'
 	// );
 
-	// $options[] = array(
-	// 	'name' => __( 'Textarea', ThemeDomain ),
-	// 	'desc' => __( 'Textarea description.', ThemeDomain ),
-	// 	'id' => 'example_textarea',
-	// 	'std' => 'Default Text',
-	// 	'type' => 'textarea'
-	// );
+	$options[] = array(
+		'name' => __( 'Textarea', ThemeDomain ),
+		'desc' => __( 'Textarea description.', ThemeDomain ),
+		'id' => 'example_textarea',
+		'std' => 'Default Text',
+		'type' => 'textarea'
+	);
 
 	// $options[] = array(
 	// 	'name' => __( 'Input Select Small', ThemeDomain ),
@@ -258,12 +258,12 @@ function optionsframework_options() {
 	// 	'type' => 'text'
 	// );
 
-	// $options[] = array(
-	// 	'name' => __( 'Uploader Test', ThemeDomain ),
-	// 	'desc' => __( 'This creates a full size uploader that previews the image.', ThemeDomain ),
-	// 	'id' => 'example_uploader',
-	// 	'type' => 'upload'
-	// );
+	$options[] = array(
+		'name' => __( 'Uploader Test', ThemeDomain ),
+		'desc' => __( 'This creates a full size uploader that previews the image.', ThemeDomain ),
+		'id' => 'example_uploader',
+		'type' => 'upload'
+	);
 
 	// $options[] = array(
 	// 	'name' => "Example Image Selector",

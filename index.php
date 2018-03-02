@@ -84,8 +84,8 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-	
-
+<?php echo theme_option('example_textarea') ?>	
+<?php echo theme_option('example_uploader') ?>
 
 					
 <?php

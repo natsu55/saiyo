@@ -15,11 +15,6 @@ function gm_register_meta_boxes( $meta_boxes ) {
 				'type' => 'image_advanced',
 			),
 			array(
-				'name' => __( 'Color', ThemeDomain ),
-				'id'   => 'color',
-				'type' => 'color',
-			),
-			array(
 				'name' => __( 'Order', ThemeDomain ),
 				'id'   => 'meta_order',
 				'type' => 'text',
@@ -88,7 +83,7 @@ function gm_register_meta_boxes( $meta_boxes ) {
 		'post_types' => array('page'), // List of taxonomies. Array or string
 		'priority'	=> 'low',
 		'include'	=> array(
-				'template' => array('template-dashboard/dashboard-how-to.php','template-dashboard/dashboard-index.php'),
+				'template' => array('FAQ.php'),
 
 			),
 

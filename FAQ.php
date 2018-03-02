@@ -25,8 +25,20 @@ get_header(); ?>
 		</div>
 	</div>
 </header>
+<?php 
+
+$image_id = get_post_meta( $post->ID, 'image_advanced', true ); 
 
 
+
+	if($image_id != null){
+		$image = wp_get_attachment_image_src( $image_id, 'full' );
+		$image = $image[0];
+	}
+	echo $image;
+?>
+
+<?php echo get_post_meta( $post->ID, 'meta_order', true ); ?>
 <div class="container block-faq">
 	<div>
 		<!--Services Heading-->
