@@ -19,3 +19,50 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+/**
+ *
+ * By: Hugh
+ *
+ * Header Code
+ *
+ **/
+
+.entry-nav > a{
+    color: #FB4F43;
+}
+
+/**
+ *
+ * By: Hugh
+ *
+ * Footer Code
+ *
+ **/
+
+.menu-footer-container > .menu{
+    list-style-type: none;
+    width: 100%;
+}
+
+.menu-footer-container > .menu > li{
+    padding: 8px 0px;
+    float: left;
+    display: inline-block;
+    width: 50%;
+    height: 37px;
+}
+
+.menu-footer-container > .menu > li:before{
+    content: "›";
+    color: #F77D83;
+    font-weight: bold;
+}
+
+.menu-footer-container > .menu > li > a{
+    display: inline-block;
+    font-size: 15px;
+    line-height: 21px;
+    height: 21px;
+    text-transform: uppercase;
+    padding: 0 0 0 10px;
+}

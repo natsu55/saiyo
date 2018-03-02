@@ -259,11 +259,42 @@ function optionsframework_options() {
 	// );
 
 	$options[] = array(
-		'name' => __( 'Uploader Test', ThemeDomain ),
-		'desc' => __( 'This creates a full size uploader that previews the image.', ThemeDomain ),
-		'id' => 'example_uploader',
+		'name' => __( '住所アイコン', ThemeDomain ),
+		'id' => 'icon_address',
 		'type' => 'upload'
 	);
+
+	$options[] = array(
+		'name' => __( '住所', ThemeDomain ),
+		'id' => 'address',
+		'type' => 'text'
+	);
+
+	$options[] = array(
+		'name' => __( 'メールアイコン', ThemeDomain ),
+		'id' => 'icon_mail',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
+		'name' => __( 'メール', ThemeDomain ),
+		'id' => 'mail',
+		'type' => 'text'
+	);
+
+	$options[] = array(
+		'name' => __( 'TEL アイコン', ThemeDomain ),
+		'id' => 'icon_phone',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
+		'name' => __( 'TEL', ThemeDomain ),
+		'id' => 'phone',
+		'type' => 'text'
+	);
+
+
 
 	// $options[] = array(
 	// 	'name' => "Example Image Selector",

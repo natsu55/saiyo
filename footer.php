@@ -23,12 +23,7 @@
 				<div class="row">
 					<!--footer widget one-->
 					<div class="col-md-4 col-sm-6">
-						<div class="footer-widget"><a href="/"><img src="img/logo.png" alt="" class="img-responsive"></a>
-							<!-- <p class="text-sm-footer">
-								テキストテキストテキストテキストテキストテキストテキストテ<br>
-								キストテキストテキストテキストテキストテキストテキストテキ<br>
-								ストテキストテキストテキストテキストテキストテキスト...
-							</p> -->
+						<div class="footer-widget"><a href="/"><img src="<?php header_image() ?>" alt="" class="img-responsive"></a>
 						</div>
 					</div>
 					<!--/ footer widget one-->
@@ -37,13 +32,9 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="footer-widget quicl-links">
 							<h3>サイトメニュー</h3>
-							<ul>
-								<li><i class="fa  fa-angle-right"></i> <a href="/">HOME</a></li>
-								<li><i class="fa  fa-angle-right"></i> <a href="/FAQ.php">FAQ</a></li>
-								<li><i class="fa  fa-angle-right"></i> <a href="/KnowCompany.php">会社を知る</a></li>
-								<li><i class="fa  fa-angle-right"></i> <a href="#">採用情報</a></li>
-								<li><i class="fa  fa-angle-right"></i> <a href="/KnowPeople.php">人を知る</a></li>
-							</ul>
+							<?php wp_nav_menu( array(
+								'menu' => 'Footer'
+							) ); ?>
 						</div>
 					</div>
 					<!--/ footer widget Two-->
@@ -52,9 +43,9 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="footer-widget address">
 							<h3>会社情報</h3>
-							<p><img src="/img/icon-address.png"><span>大阪府大阪市西区江戸堀1丁目2番1号</span></p>
-							<p><img src="/img/icon-email.png"><span>info@daudi.jp</span></p>
-							<p><img src="/img/icon-tel.png"><span>03-3272-6263</span></p>
+							<p><img src="<?php echo theme_option('icon_address') ?>"><span><?php echo theme_option('address') ?></span></p>
+							<p><img src="<?php echo theme_option('icon_mail') ?>"><span><?php echo theme_option('mail') ?></span></p>
+							<p><img src="<?php echo theme_option('icon_phone') ?>"><span><?php echo theme_option('phone') ?></span></p>
 						</div>
 					</div>
 					<!--/ footer widget thre-->
