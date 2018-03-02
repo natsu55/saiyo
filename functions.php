@@ -80,6 +80,58 @@ function luggage_setup() {
 endif;
 add_action( 'after_setup_theme', 'luggage_setup' );
 
+
+/**
+ * Implement Custom taxonomies for FAQ.
+ *
+ * @since 2018/03/01 (Version 1.0)
+ */
+add_action( 'init', 'build_taxonomies' );
+
+function build_taxonomies() {
+    register_taxonomy(
+    	'faq_taxonomy',
+    	'post',
+   		array(
+        	'hierarchical' => true,
+        	'label' => 'FAQ Type',
+        	'query_var' => true,
+        	'rewrite' => true
+    	)
+	);
+}
+
+/**
+ * Implement Custom post types for Saiyo website.
+ *
+ * @since 2018/03/01 (Version 1.0)
+ */
+add_action('init', 'post_type_init');
+
+function post_type_init()
+{
+    // init partner in post admin
+    $argsColumnInfo = array(
+        'label' => 'FAQ',
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => 'edit.php',
+        'capability_type' => 'post',
+        'taxonomies' => array('faq_taxonomy'),
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'faq_post'),
+        'query_var' => true,
+        'supports' => array(
+            'title',
+            'custom-fields',
+            'editor')
+    );
+    register_post_type('faq_post', $argsColumnInfo);
+    // end init faq in post admin
+}
+
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -138,57 +190,6 @@ function luggage_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'luggage_scripts' );
-
-
-/**
- * Implement Custom taxonomies for FAQ.
- *
- * @since 2018/03/01 (Version 1.0)
- */
-add_action( 'init', 'build_taxonomies' );
-
-function build_taxonomies() {
-    register_taxonomy(
-    	'faq_taxonomy',
-    	'post',
-   		array(
-        	'hierarchical' => true,
-        	'label' => 'FAQ Type',
-        	'query_var' => true,
-        	'rewrite' => true
-    	)
-	);
-}
-
-/**
- * Implement Custom post types for Saiyo website.
- *
- * @since 2018/03/01 (Version 1.0)
- */
-add_action('init', 'post_type_init');
-
-function post_type_init()
-{
-    // init partner in post admin
-    $argsColumnInfo = array(
-        'label' => 'FAQ',
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => 'edit.php',
-        'capability_type' => 'post',
-        'taxonomies' => array('faq_taxonomy'),
-        'hierarchical' => false,
-        'rewrite' => array('slug' => 'faq'),
-        'query_var' => true,
-        'supports' => array(
-            'title',
-            'custom-fields',
-            'editor')
-    );
-    register_post_type('faq', $argsColumnInfo);
-    // end init partner in post admin
-}
-
 
 /**
  * Implement the Custom Header feature.
