@@ -52,7 +52,7 @@ get_header(); ?>
 					<h2 class="para-heading">' . $tax->name . '</h2>'; //Title
 
 			$args = array(
-				'post_type' => 'faq', 
+				'post_type' => 'faq_post', 
 				'posts_per_page' => -1,
 				'numbeposts' => -1,
 				'tax_query' => [
@@ -79,7 +79,7 @@ get_header(); ?>
 		?>
 	</div>
 
-	<?php get_template_part( 'template-parts/content', 'page' ); ?>
+	<?php //get_template_part( 'template-parts/content', 'page' ); ?>
 </div>
 
 <?php
